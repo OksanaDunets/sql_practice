@@ -1,0 +1,1 @@
+SELECT count(*) FROM db_blog.posts;

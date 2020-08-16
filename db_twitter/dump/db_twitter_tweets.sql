@@ -1,0 +1,55 @@
+-- MySQL dump 10.13  Distrib 8.0.19, for macos10.15 (x86_64)
+--
+-- Host: 127.0.0.1    Database: db_twitter
+-- ------------------------------------------------------
+-- Server version	8.0.19
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `tweets`
+--
+
+DROP TABLE IF EXISTS `tweets`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tweets` (
+  `tweet_id` int NOT NULL,
+  `tweet_content` varchar(3000) DEFAULT NULL,
+  `user_id` int DEFAULT NULL,
+  `published_at` datetime NOT NULL,
+  `updated_at` varchar(45) DEFAULT NULL,
+  `retweet_count` int DEFAULT NULL,
+  PRIMARY KEY (`tweet_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tweets`
+--
+
+LOCK TABLES `tweets` WRITE;
+/*!40000 ALTER TABLE `tweets` DISABLE KEYS */;
+INSERT INTO `tweets` VALUES (1,'tweet 1',1,'2020-03-08 00:00:00',NULL,NULL),(2,'tweet 2',1,'2020-05-01 00:00:00',NULL,NULL),(3,'tweet 3',1,'2020-06-14 00:00:00',NULL,23),(4,'tweet 4',2,'2019-11-20 00:00:00',NULL,23),(5,'tweet 5 ',2,'2019-06-01 00:00:00',NULL,234),(6,'tweet 6',2,'2019-11-13 00:00:00',NULL,456),(7,'tweet 7',3,'2020-01-01 00:00:00',NULL,34),(8,'tweet 8',2,'2020-02-21 00:00:00',NULL,4),(9,'tweet 9',3,'2020-07-31 00:00:00',NULL,2),(10,'tweet 10',3,'2020-08-01 00:00:00',NULL,456),(11,'tweet 11',3,'2020-08-02 00:00:00',NULL,45),(12,'tweet 12',3,'2020-06-25 00:00:00',NULL,456),(13,'tweet 13',3,'2020-12-31 00:00:00',NULL,567),(15,'tweet 15',4,'2019-07-01 00:00:00',NULL,123),(16,'tweet 16',4,'2019-10-01 00:00:00',NULL,23),(17,'tweet 17',4,'2019-12-31 00:00:00',NULL,345),(18,'tweet 18',4,'2020-02-01 00:00:00',NULL,345),(19,'tweet 19',5,'2020-05-01 00:00:00',NULL,345),(20,'tweet 20',5,'2020-05-01 00:00:00',NULL,456),(21,'tweet 21',6,'2020-05-01 00:00:00',NULL,456),(22,'tweet 22',8,'2020-05-01 00:00:00',NULL,456),(23,'tweet 23',8,'2020-05-01 00:00:00',NULL,456),(24,'tweet 24',8,'2020-05-01 00:00:00',NULL,456),(25,'tweet 25',8,'2020-05-01 00:00:00',NULL,456),(26,'tweet 26',8,'2020-06-14 00:00:00',NULL,2),(27,'tweet 27',8,'2010-11-15 00:00:00',NULL,4);
+/*!40000 ALTER TABLE `tweets` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-08-16 18:39:18

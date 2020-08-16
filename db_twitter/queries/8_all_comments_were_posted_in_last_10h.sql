@@ -1,0 +1,1 @@
+SELECT * FROM db_twitter.comments WHERE published_at >= DATE_SUB(NOW() , INTERVAL 10 HOUR)
