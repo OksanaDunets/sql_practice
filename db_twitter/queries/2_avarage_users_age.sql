@@ -1,1 +1,1 @@
-SELECT AVG(age) From db_twitter.users;
+SELECT ROUND(AVG(DATEDIFF(CURDATE(), birthday)/365.25)) FROM db_twitter.users;

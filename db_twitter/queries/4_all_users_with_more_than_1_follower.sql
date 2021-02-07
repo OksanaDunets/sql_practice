@@ -1,2 +1,2 @@
-Select user_id, user_name From db_twitter.users
-where follower_ids >=1;
+SELECT user_id, user_name FROM db_twitter.users
+WHERE follower_ids >=1;
