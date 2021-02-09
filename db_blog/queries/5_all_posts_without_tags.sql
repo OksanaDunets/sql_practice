@@ -1,2 +1,2 @@
 SELECT * FROM db_blog.posts
-where tag IS NULL;
+WHERE tag IS NULL;

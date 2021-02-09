@@ -1,5 +1,7 @@
-Select author, (CHAR_LENGTH(db_blog.posts.tag) - CHAR_LENGTH(REPLACE(db_blog.posts.tag,',',''))) div
-CHAR_LENGTH(',') as tag_count 
-FROM db_blog.posts
-order by tag_count desc
-limit 5;
+SELECT u.user_id, u.first_name, u.last_name, COUNT(pt.tag_id) AS tag_number
+FROM db_blog.users u
+JOIN db_blog.posts p
+ON u.first_name = p.author
+JOIN db_blog.posts_tags pt ON p.post_id = pt.post_id
+Group BY u.user_id
+ORDER BY tag_number DESC LIMIT 5;

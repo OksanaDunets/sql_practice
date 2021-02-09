@@ -1,1 +1,1 @@
-SELECT count(*) FROM db_blog.posts;
+SELECT COUNT(*) FROM db_blog.posts;
