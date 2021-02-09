@@ -29,7 +29,6 @@ CREATE TABLE `posts` (
   `post_category` int DEFAULT NULL,
   `author` varchar(30) COLLATE utf8_bin DEFAULT NULL,
   `published_at` varchar(30) COLLATE utf8_bin NOT NULL,
-  `tag` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   PRIMARY KEY (`post_id`),
   KEY `content_idx` (`content`),
   CONSTRAINT `content` FOREIGN KEY (`content`) REFERENCES `posts_content` (`post_id`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -42,7 +41,7 @@ CREATE TABLE `posts` (
 
 LOCK TABLES `posts` WRITE;
 /*!40000 ALTER TABLE `posts` DISABLE KEYS */;
-INSERT INTO `posts` VALUES (1,'Title1',1,1,'user1','2020-01-10','blog,post'),(2,'Title2',2,2,'user2','2020-0115','tag,new'),(3,'Title3',3,3,'user3','2020-01-20','update'),(4,'Title4',4,4,'user4','2020-01-25','winter,eco,note'),(5,'Title5',5,5,'user5','2020-01-30','spring,summer'),(6,'Title6',6,3,'user6','2020-02-01',NULL),(7,'S title7',7,4,'user7','2020-02-05',NULL),(8,'Title8',8,4,'user8','2020-02-10',NULL),(9,'Title9',9,2,'user9','2020-02-15','summer,activity,travel'),(10,'Title10',10,4,'user10','2020-02-22','autumn'),(11,'Title11',11,5,'user11','2020-02-27','education,university'),(12,'Title12',12,2,'user12','2020-03-03','polotics,stage'),(13,'S title13',13,5,'user13','2020-03-08',NULL),(14,'Title14',14,3,'user14','2020-03-11','pop,stage,eco'),(15,'Title15',15,4,'user15','2020-03-13','autumn,travel,activity'),(16,'Title16',16,5,'user16','2020-03-19','update,new,post'),(17,'Title17',16,3,'user16','2020-03-24',NULL),(18,'Title18',18,2,'user18','2020-03-30',NULL),(19,'Title19',19,4,'user19','2020-04-01','update,new,post,pop,stage,eco'),(20,'Title20',20,1,'user20','2020-04-04','pop,stage,eco'),(21,'Title21',21,3,'user2','2020-04-04','education,university,update'),(22,'Title22',22,5,'user3','2020-04-10','autumn,travel,activity'),(23,'Title23',23,5,'user6','2020-04-13','tag19,tag20,tag21'),(24,'Title24',24,4,'user10','2020-04-16',NULL),(25,'Title25',25,2,'user8','2020-04-18',NULL),(26,'Title26',26,4,'user2','2020-04-20',NULL),(27,'Title27',27,3,'user3','2020-04-24','winter,cooking'),(28,'Title28',28,2,'user6','2020-04-30',NULL),(29,'Title29',29,2,'user7','2020-05-01',NULL),(30,'Title30',30,3,'user10','2020-05-10','university,new,education,post'),(31,'S title31',31,3,'user12','2020-05-16','post,blog,tag'),(32,'Title32',32,2,'user12','2020-05-19','tag'),(33,'Title33',33,4,'user13','2020-06-08',NULL),(34,'Title34',34,5,'user14','2020-06-08','winter'),(35,'Title35',35,6,'user2','2020-06-08',NULL);
+INSERT INTO `posts` VALUES (1,'Title1',1,1,'user1','2020-01-10'),(2,'Title2',2,2,'user2','2020-0115'),(3,'Title3',3,3,'user3','2020-01-20'),(4,'Title4',4,4,'user4','2020-01-25'),(5,'Title5',5,5,'user5','2020-01-30'),(6,'Title6',6,3,'user6','2020-02-01'),(7,'S title7',7,4,'user7','2020-02-05'),(8,'Title8',8,4,'user8','2020-02-10'),(9,'Title9',9,2,'user9','2020-02-15'),(10,'Title10',10,4,'user10','2020-02-22'),(11,'Title11',11,5,'user11','2020-02-27'),(12,'Title12',12,2,'user12','2020-06-07'),(13,'S title13',13,5,'user13','2020-03-08'),(14,'Title14',14,3,'user14','2020-03-11'),(15,'Title15',15,4,'user15','2020-03-13'),(16,'Title16',16,5,'user16','2020-03-19'),(17,'Title17',16,3,'user16','2020-03-24'),(18,'Title18',18,2,'user18','2020-03-30'),(19,'Title19',19,4,'user19','2020-04-01'),(20,'Title20',20,1,'user20','2020-04-04'),(21,'Title21',21,3,'user2','2020-04-04'),(22,'Title22',22,5,'user3','2020-04-10'),(23,'Title23',23,5,'user6','2020-04-13'),(24,'Title24',24,4,'user10','2020-04-16'),(25,'Title25',25,2,'user8','2020-04-18'),(26,'Title26',26,4,'user2','2020-04-20'),(27,'Title27',27,3,'user3','2020-04-24'),(28,'Title28',28,2,'user6','2020-06-07'),(29,'Title29',29,2,'user7','2020-05-01'),(30,'Title30',30,3,'user10','2020-05-10'),(31,'S title31',31,3,'user12','2020-05-16'),(32,'Title32',32,2,'user12','2020-06-07'),(33,'Title33',33,4,'user13','2020-06-08'),(34,'Title34',34,5,'user14','2020-06-08'),(35,'Title35',35,6,'user2','2020-06-07');
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-16 18:35:35
+-- Dump completed on 2021-02-09 23:32:25
